@@ -130,15 +130,15 @@ triggered automatically by the runtime.
 On macOS, we catch crashes and other events using a signal handler. At
 time of writing, this is installed for the following signals:
 
-| Signal |         | Description               | Comment                                              |
-|--------|---------|---------------------------|------------------------------------------------------|
-| 3      | SIGQUIT | Quit program              |                                                      |
-| 4      | SIGILL  | Illegal instruction       |                                                      |
-| 5      | SIGTRAP | Trace trap                |                                                      |
-| 6      | SIGABRT | Abort program             |                                                      |
-| 8      | SIGFPE  | Floating point exception  | On Intel, integer divide by zero also triggers this. |
-| 10     | SIGBUS  | Bus error                 |                                                      |
-| 11     | SIGSEGV | Segmentation violation    |                                                      |
+| Signal           || Description               | Comment                                              |
+|---------|---------|---------------------------|------------------------------------------------------|
+| 3       | SIGQUIT | Quit program              |                                                      |
+| 4       | SIGILL  | Illegal instruction       |                                                      |
+| 5       | SIGTRAP | Trace trap                |                                                      |
+| 6       | SIGABRT | Abort program             |                                                      |
+| 8       | SIGFPE  | Floating point exception  | On Intel, integer divide by zero also triggers this. |
+| 10      | SIGBUS  | Bus error                 |                                                      |
+| 11      | SIGSEGV | Segmentation violation    |                                                      |
 
 If crash catching is enabled, the signal handler will be installed for
 any process that links the Swift runtime. If you replace the handlers
